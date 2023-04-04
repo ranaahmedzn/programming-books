@@ -1,7 +1,13 @@
+import { Outlet } from "react-router-dom"
+import Header from "./components/Header"
+
 function App() {
   return (
     <div className='App'>
-      <h1 className="text-center text-blue-600 font-bold text-3xl my-3">Welcome to nextPage!</h1>
+      <Header></Header>
+      <div>
+        <Outlet></Outlet>
+      </div>
     </div>
   )
 }
