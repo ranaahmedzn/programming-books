@@ -10,7 +10,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="container mx-auto mt-0 bg-gray-100 h-[70px] px-3 md:px-8">
+    <nav className="mt-0 bg-gray-100 h-[70px] px-3 md:px-8">
       <div className="flex h-full justify-between items-center">
         <div className="flex items-center gap-2">
           <BoltIcon className="h-6 w-6 text-blue-500" />
