@@ -2,6 +2,7 @@ import React from "react";
 import {ShoppingCartIcon} from "@heroicons/react/24/solid";
 import Lottie from 'lottie-react'
 import reader from '../assets/reader.json'
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -19,13 +20,15 @@ const Home = () => {
           those original thoughts of his aren’t very new after all. The man who
           does not read good books is no better than the man who can’t.
         </p>
-        <button
-          type="button"
-          className="flex gap-2 py-3 px-8 bg-blue-500 hover:bg-blue-700 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg "
-        >
-          Visit Store
-          <ShoppingCartIcon className="h-6 w-6" />
-        </button>
+        <Link to="/books">
+            <button
+            type="button"
+            className="flex gap-2 py-3 px-8 bg-blue-500 hover:bg-blue-700 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg "
+            >
+            Visit Store
+            <ShoppingCartIcon className="h-6 w-6" />
+            </button>
+        </Link>
       </div>
 
         {/* Lottie animation  */}
