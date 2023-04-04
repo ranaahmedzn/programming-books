@@ -4,11 +4,12 @@ import { useLoaderData } from "react-router-dom";
 const BookDetail = () => {
   const book = useLoaderData();
   console.log(book);
-  const { image, title, subtitle, price, authors, publisher, year, rating} = book;
+  const { image, title, subtitle, price, authors, publisher, year, rating } =
+    book;
   return (
     <div className="my-container">
       {/* Container Box */}
-      <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
+      <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border border-rose-500 rounded shadow-sm lg:flex-row sm:mx-auto">
         {/* Image Container */}
         <div className=" lg:w-1/2 h-full">
           <img
@@ -31,7 +32,7 @@ const BookDetail = () => {
           <p className="mb-5 text-gray-900">Rating: {rating}</p>
 
           <div className="flex gap-5 mt-8 items-center">
-            <a href='#' target="_blank" className="btn">
+            <a href="/" target="_blank" className="btn">
               Buy Now
             </a>
             <p className="items-center font-extrabold text-gray-600 ">

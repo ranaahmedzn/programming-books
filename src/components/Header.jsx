@@ -13,7 +13,7 @@ const Header = () => {
     <nav className="mt-0 bg-gray-100 h-[70px] px-3 md:px-8">
       <div className="flex h-full justify-between items-center">
         <div className="flex items-center gap-2">
-          <BoltIcon className="h-6 w-6 text-blue-500" />
+          <BoltIcon className="h-6 w-6 text-rose-500" />
           <h3 className="font-bold text-2xl">NextPage</h3>
         </div>
 
@@ -41,9 +41,9 @@ const Header = () => {
         <div onClick={() => setIsOpen(!isOpen)} className="md:hidden relative">
           <span>
             {isOpen ? (
-              <XMarkIcon className="h-6 w-6 text-blue-500" />
+              <XMarkIcon className="h-6 w-6 text-rose-500" />
             ) : (
-              <Bars3BottomRightIcon className="h-6 w-6 text-blue-500" />
+              <Bars3BottomRightIcon className="h-6 w-6 text-rose-500" />
             )}
           </span>
 

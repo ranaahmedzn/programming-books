@@ -1,7 +1,7 @@
 import React from "react";
-import {ShoppingCartIcon} from "@heroicons/react/24/solid";
-import Lottie from 'lottie-react'
-import reader from '../assets/reader.json'
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import Lottie from "lottie-react";
+import reader from "../assets/reader.json";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
         </span>
         <h1 className="text-4xl my-3 font-bold">
           A reader lives a <br /> thousand lives
-          <span className="text-blue-500"> before he dies</span>
+          <span className="text-rose-500"> before he dies</span>
         </h1>
         <p className="my-3 text-lg w-[80%]">
           Books are a uniquely portable magic. Books serve to show a man that
@@ -21,20 +21,20 @@ const Home = () => {
           does not read good books is no better than the man who can’t.
         </p>
         <Link to="/books">
-            <button
+          <button
             type="button"
-            className="flex gap-2 py-3 px-8 bg-blue-500 hover:bg-blue-700 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg "
-            >
+            className="flex gap-2 py-3 px-8 bg-rose-500 hover:bg-rose-700 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg "
+          >
             Visit Store
             <ShoppingCartIcon className="h-6 w-6" />
-            </button>
+          </button>
         </Link>
       </div>
 
-        {/* Lottie animation  */}
+      {/* Lottie animation  */}
       <div>
         <div className="w-full lg:w-3/4 lg:ml-auto">
-            <Lottie animationData={reader} loop={true} />
+          <Lottie animationData={reader} loop={true} />
         </div>
       </div>
     </div>
