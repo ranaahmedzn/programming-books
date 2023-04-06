@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 const BookDetail = () => {
+  const [fold, setFold] = useState(true);
   const book = useLoaderData();
-  console.log(book);
-  const { image, title, subtitle, price, authors, publisher, year, rating } =
-    book;
+  const { image, title, desc, price, authors, publisher, year, rating } = book;
+
   return (
     <div className="my-container">
       {/* Container Box */}
@@ -30,6 +30,28 @@ const BookDetail = () => {
           <p className=" text-gray-900">Publisher: {publisher}</p>
           <p className=" text-gray-900">Year: {year}</p>
           <p className="mb-5 text-gray-900">Rating: {rating}</p>
+
+          {fold ? (
+            <p className="text-gray-500">
+              {desc.substring(0, 100)}....
+              <span
+                onClick={() => setFold(!fold)}
+                className="text-rose-500 font-bold cursor-pointer"
+              >
+                Read More
+              </span>
+            </p>
+          ) : (
+            <p className="text-gray-900">
+              {desc}..
+              <span
+                onClick={() => setFold(!fold)}
+                className="text-rose-500 font-bold cursor-pointer"
+              >
+                Read Less
+              </span>
+            </p>
+          )}
 
           <div className="flex gap-5 mt-8 items-center">
             <a href="/" target="_blank" className="btn">
